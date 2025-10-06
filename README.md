@@ -1,92 +1,183 @@
-# DeliveryGo
-Integrantes Enzo Casanovas, Alen Lantaño y Bruno Sosa Villamon
-**¿QUE HACE EL PROGRAMA?**
-Nuestro objetivo fue desarrollar un checkout moderno y eficiente para un cliente dedicado al servicio de delivery, priorizando una experiencia rápida, liviana e intuitiva. Diseñamos una solución pensada para agilizar el proceso de compra, mejorar la usabilidad y ofrecer a nuestro cliente una herramienta funcional, práctica y visualmente atractiva, adaptada a las necesidades del rubro.
-**¿QUE TECNOLOGIAS USAMOS?**
-Desarrollamos el proyecto utilizando el lenguaje C#, aprovechando su potencia y versatilidad para construir una aplicación robusta y eficiente. Optamos por una implementación en consola, priorizando la simplicidad, el rendimiento y la facilidad de uso, manteniendo un enfoque claro en la funcionalidad y la experiencia del usuario.
-**¿QUE NECESIDAD SATISFACE?**
-Con este desarrollo logramos optimizar el orden y la velocidad en el proceso de gestión de pedidos, brindando una solución eficiente para los servicios de delivery. De esta manera, facilitamos la organización de los pedidos y mejoramos significativamente los tiempos de respuesta, elevando la calidad y productividad del servicio.
-**¿EN QUE RUBROS/ACTIVIDADES PODRIA SER APLICADO?**
-Este sistema puede adaptarse a diversos sectores que requieran gestionar pedidos o entregas de manera ágil y organizada. Además del rubro de delivery gastronómico, su estructura flexible permite implementarlo en:
+:
 
-**Comercios minoristas que ofrezcan reparto a domicilio.**
+🚀 DeliveryGo
+👥 Integrantes
 
-**Farmacias con servicio de entrega rápida.**
+Enzo Casanovas, Alen Lantaño y Bruno Sosa Villamon
 
-**Tiendas de tecnología o indumentaria con gestión de pedidos online.**
+🧩 ¿Qué hace el programa?
 
-**Supermercados que busquen optimizar sus procesos de envío.**
+Nuestro objetivo fue desarrollar un checkout moderno y eficiente para un cliente dedicado al servicio de delivery, priorizando una experiencia rápida, liviana e intuitiva.
+Diseñamos una solución enfocada en:
 
-**Empresas logísticas o de mensajería, que necesiten un control eficiente de órdenes.**
+Agilizar el proceso de compra
 
-En resumen, es una herramienta versátil que puede aplicarse en cualquier negocio que busque mejorar la organización y la velocidad en la gestión de pedidos.
+Mejorar la usabilidad
 
-**COMO SE UTILIZA LA APLICACION**
-Paso 1:Descargar el repositorio.
-Paso 2:Abrir el proyecto en visual studio/Rider/VS Code con NET SDK.
-Paso 3:Compilar el proyecto.
-Paso 4:Ejecutar en consola (o ejecutar el debug):dotnet run.
-Paso 5:Seguir las opciones del menu(agregar items,elegir envio,pagar,confirmar pedido).
+Ofrecer una herramienta práctica y visualmente atractiva
 
-**Patrones que se utilizaron**
-*Patrones de Diseño en DeliveryGo*
-Resumen de Patrones Aplicados
-🛒 Command + Undo/Redo - Carrito
-Uso: Operaciones del carrito (agregar, quitar, cambiar cantidad)
+🛠️ Tecnologías utilizadas
 
-Beneficio: Permite deshacer/rehacer cambios con historial completo
+El proyecto fue desarrollado en C#, aprovechando su potencia y versatilidad para construir una aplicación robusta y eficiente.
 
-🚚 Strategy - Métodos de Envío
-Uso: Cálculo de costos de envío (Moto, Correo, Retiro)
+🔹 Interfaz: Consola
+🔹 Motivo: Simplicidad, rendimiento y facilidad de uso
+🔹 Entorno compatible: Visual Studio, Rider, VS Code con .NET SDK
 
-Beneficio: Cambiar método de envío en tiempo real sin modificar código
+🎯 Necesidad que satisface
 
-⚙ Singleton - Configuración Global
-Uso: Parámetros globales (IVA, umbral envío gratis)
+DeliveryGo mejora el orden y la velocidad en la gestión de pedidos, ofreciendo:
 
-Beneficio: Configuración centralizada y accesible desde toda la app
+Organización más clara
 
-💳 Factory + Adapter - Sistema de Pagos
-Factory: Creación de métodos de pago (Tarjeta, Transferencia, MP)
+Mejores tiempos de respuesta
 
-Adapter: Integración SDK externa de Mercado Pago
+Mayor productividad en servicios de delivery
 
-Beneficio: Sistema extensible para nuevos métodos de pago
+🏪 Aplicación en distintos rubros
 
-🎁 Decorator - Modificadores de Pago
-Uso: Aplicar IVA y cupones a pagos
+El sistema es adaptable a diversos sectores que requieran gestión ágil de pedidos:
 
-Beneficio: Agregar funcionalidades dinámicamente sin modificar código base
+🛍️ Comercios minoristas con reparto a domicilio
 
-📦 Builder - Construcción de Pedidos
-Uso: Crear pedidos complejos paso a paso
+💊 Farmacias con entregas rápidas
 
-Beneficio: Validación integrada y código más legible
+👕 Tiendas de tecnología o indumentaria
 
-🔔 Observer - Notificaciones
-Uso: Notificar cambios de estado a Cliente, Logística y Auditoría
+🛒 Supermercados con servicios de envío
 
-Beneficio: Comunicación en tiempo real desacoplada
+🚚 Empresas logísticas o de mensajería
 
-🚪 Facade - Interfaz Unificada
-Uso: Orquestar todos los patrones en una API simple
+Versátil y escalable: Aplicable en cualquier negocio que busque mejorar la organización y velocidad en la gestión de pedidos.
 
-Beneficio: Ocultar complejidad del sistema detrás de interfaz sencilla
+🧭 ¿Cómo se utiliza la aplicación?
 
-**Caso narrado del uso**
-Carlos abre la aplicación DeliveryGo y ve el menú principal:
+📥 Descargar el repositorio
+
+💻 Abrir el proyecto en Visual Studio / Rider / VS Code
+
+⚙️ Compilar el proyecto
+
+▶️ Ejecutar en consola con dotnet run
+
+📋 Seguir las opciones del menú (agregar ítems, elegir envío, pagar, confirmar pedido)
+
+🧠 Patrones de diseño utilizados
+Patrón	Uso	Beneficio
+Command + Undo/Redo	Operaciones del carrito	Deshacer/rehacer con historial
+Strategy	Cálculo de costos de envío	Cambiar método sin modificar código
+Singleton	Configuración global (IVA, envío gratis)	Acceso centralizado
+Factory + Adapter	Sistema de pagos (tarjeta, transferencia, MP)	Extensibilidad e integración externa
+Decorator	Aplicar IVA y cupones	Funcionalidades dinámicas sin modificar base
+Builder	Construcción de pedidos	Validación integrada y claridad
+Observer	Notificaciones en tiempo real	Comunicación desacoplada
+Facade	Interfaz unificada de la app	Oculta la complejidad del sistema
+🎬 Caso narrado de uso
+👤 Usuario: Carlos
+
+Carlos abre DeliveryGo y accede al menú principal:
+
 ┌─────────────────────────────┐
 │   === DELIVERYGO - MENÚ ===  │
-│   1. Agregar ítem al carrito │
-│   2. Cambiar cantidad        │
-│   3. Quitar ítem            │
-│   4. Ver resumen de compra   │
-│   5. Deshacer                │
-│   6. Rehacer                 │
-│   7. Elegir método de envío  │
-│   8. Realizar pago          │
-│   9. Confirmar pedido       │
-│   10. Desuscribir Logística │
-│   0. Salir                  │
+│ 1. Agregar ítem al carrito  │
+│ 2. Cambiar cantidad         │
+│ 3. Quitar ítem              │
+│ 4. Ver resumen de compra    │
+│ 5. Deshacer                 │
+│ 6. Rehacer                  │
+│ 7. Elegir método de envío   │
+│ 8. Realizar pago            │
+│ 9. Confirmar pedido         │
+│ 10. Desuscribir Logística   │
+│ 0. Salir                    │
 └─────────────────────────────┘
 
+🛒 Agrega ítems al carrito
+SKU: MON001
+Nombre: Monitor LED 24"
+Precio: $45.000
+Cantidad: 1
+✓ Ítem agregado correctamente
+
+SKU: TEC002
+Nombre: Teclado Mecánico
+Precio: $8.000
+Cantidad: 1
+✓ Ítem agregado correctamente
+
+SKU: MOU003
+Nombre: Mouse Inalámbrico
+Precio: $5.000
+Cantidad: 2  ← (Error, quería 1)
+✓ Ítem agregado correctamente
+
+↩️ Deshacer acción
+
+Carlos presiona la opción 5 para deshacer el último ítem y corregir:
+
+✓ Operación deshecha (Undo)
+
+📋 Revisión del carrito
+Monitor LED 24" (x1) - $45.000  
+Teclado Mecánico (x1) - $8.000  
+Mouse Inalámbrico (x1) - $5.000  ← ¡Ahora está correcto!
+
+Subtotal: $58.000  
+Costo de envío: $1.280  
+TOTAL: $59.280
+
+🔁 Rehacer acción
+
+Carlos cambia de opinión y selecciona la opción 6:
+
+✓ Operación rehecha (Redo)
+
+🚚 Selección del método de envío
+1. Moto ($1.280)  
+2. Correo ($3.580 - Gratis desde $50.000)  
+3. Retiro en tienda (Gratis)
+
+→ Selecciona: 2
+✓ Método de envío cambiado a: Correo
+
+🧾 Ver resumen actualizado
+Subtotal: $58.000  
+Costo de envío: $0  ← ¡Envío gratis por superar $50.000!  
+TOTAL: $58.000
+
+💳 Realizar pago
+Métodos disponibles:
+1. Tarjeta
+2. Transferencia
+3. Mercado Pago
+4. Mercado Pago (Adapter)
+
+→ Selecciona: 1
+
+¿Aplicar IVA? (s/n): s  
+¿Aplicar cupón de descuento? (s/n): s  
+% de descuento: 10%
+
+
+Cálculo del pago:
+
+- Aplicando cupón (10%): $58.000 → $52.200  
+- Aplicando IVA (21%): $52.200 → $63.162  
+
+✓ ¡Pago aprobado exitosamente!
+
+✅ Confirmar pedido
+Dirección: Av. Siempre Viva 742, Springfield  
+Tipo de pago: Tarjeta
+
+→ Confirmando pedido...
+
+✓ Pedido #1 creado exitosamente:
+  - Ítems: 3
+  - Total: $58.000
+  - Estado: Recibido
+
+🚫 Desuscribirse de logística
+✓ Logística desuscrita - no recibirá más notificaciones
+
+📊 Diagrama UML
